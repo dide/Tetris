@@ -1,0 +1,2 @@
+C:\PRGMS\Applications\node>r.js.cmd -o C:\Users\blanquet\workspace\tetr\scripts\tetr.build.js include=requireLib optimize=uglify
+C:\PRGMS\Applications\node>node node_modules\requirejs\bin\r.js -o C:\Users\blanquet\workspace\tetr\scripts\tetr.build.js include=requireLib optimize=uglify

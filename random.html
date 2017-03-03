@@ -1,0 +1,78 @@
+
+<html>
+
+<head>
+<script type="text/javascript">
+
+function Random() {
+	var salt = Math.floor((Math.random() + 1) * 999999999);
+	var currentValue = salt;
+	var n = 31;
+
+	var getBinaryDigit = function(x, n) {
+		if (n < 0)
+			return 0;
+
+		return (x >> n) & 1;
+	};
+
+	var printBinaryDigits = function(x, n) {
+		var result = "";
+		var firstLoop = true;
+
+		do {
+			var puissance = Math.pow(2, n--);
+
+			if (Math.floor(x / puissance) == 1) {
+				result += "1";
+			} else {
+				if (!firstLoop)
+					result += "0";
+			}
+
+			x = x % puissance;
+			firstLoop = false;
+
+		} while (n >= 0);
+
+		return result;
+	};
+
+	var getNextRang = function(x, n) {
+		return parseInt((getBinaryDigit(x, 0) ^ getBinaryDigit(x, 1))
+				+ printBinaryDigits(x >> 1, n - 1), 2);
+	};
+	
+	this.getRandomValue = function() {
+		currentValue = getNextRang(currentValue, n);
+		return currentValue / Math.pow(2, n);
+	};
+	
+	this.getSalt = function(){
+		return salt;
+	};
+}
+
+	window.addEventListener("load", function(event) {
+
+		var resultat = document.querySelector("div");
+		var input = document.querySelector("input");
+
+		var random = new Random();
+		input.value = random.getSalt();
+
+		input.addEventListener("keyup", function(event) {
+			resultat.innerHTML = random.getRandomValue();
+		});
+	});
+</script>
+<style>
+</style>
+</head>
+<body>
+
+	<input type="text">
+
+	<div></div>
+</body>
+</html>

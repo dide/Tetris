@@ -1,0 +1,175 @@
+@CHARSET "US-ASCII";
+
+.plateau {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	overflow: hidden;
+	background: #0d175f;
+	background-image: url("yaroslavl_blue.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	-moz-transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-moz-transform-style: flat;
+	-webkit-transform-style: flat;
+	-o-transform-style: flat;
+	-ms-transform-style: flat;
+	transform-style: flat;
+	-moz-transform-origin: 0 0;
+	-moz-transform-origin: 0 0
+}
+
+.plateau>img {
+	width: 30em;
+}
+
+.carre {
+	position: absolute;
+	top: 57.1em;
+	left: 0.1em;
+	background: #555555;
+	opacity: 1;
+	/* border: 0.1em solid #AAAAAA; */
+	-webkit-transition: color, opacity 500ms ease;
+	/* older webkit */
+	-webkit-transition: color, opacity 500ms ease;
+	-moz-transition: color, opacity 500ms ease;
+	-o-transition: color, opacity 500ms ease;
+	transition: color, opacity 500ms ease;
+}
+
+.carre>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid #091858;
+}
+
+.preview {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #0d175f;
+}
+
+.Barre {
+	/* background: #3f9145; */
+	background: #3f9145;
+}
+
+.Carre {
+	/* background: #3c9b42; */
+	background: #FF3E3E;
+}
+
+.L {
+	/* background: #32a23a; */
+	background: #3EFF74;
+}
+
+.LBar {
+	/* background: #30b83a; */
+	background: #FFDF05;
+}
+
+.S {
+	/* background: #28c633; */
+	background: #05FFE3;
+}
+
+.T {
+	/* background: #6a933a; */
+	background: #FD00F1;
+}
+
+.Z {
+	/* background: #55933a; */
+	background: #FD9000;
+}
+
+.preview>.Barre.carre {
+	margin-left: 0.5em;
+	margin-top: 0;
+}
+
+.preview>.Carre {
+	margin-left: 0.5em;
+}
+
+.score {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #0d175f;
+}
+
+.score>div {
+	text-align: center;
+	font-variant: small-caps;
+	font-size: 0.6em;
+	padding-top: 0.9em;
+}
+
+.score>div:nth-child(2n) {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.next {
+	position: absolute;
+	width: 15em;
+	border: 0.2em solid #E3E3E3;
+	left: 50%;
+	top: 50%;
+	margin-left: 7em;
+	margin-top: 5em;
+	height: 20em;
+	background: rgba(0, 0, 255, 0.4);
+	padding-bottom: 1em;
+	text-align: center;
+	/* font-size: 1.8em; */
+	padding-top: 4em;
+}
+
+.touchEvents {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+}
+
+.bouttonmenu {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #0d175f;
+	cursor: pointer;
+	z-index: 11;
+}
+
+.bouttonmenu:HOVER {
+	background: #101850;
+}
+
+.bouttonmenu:ACTIVE {
+	background: #2f3b96;
+}
+
+.bouttonmenu>div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -1.6em;
+	margin-top: -0.8em;
+	padding: 0 0.5em 0 0.5em;
+	cursor: pointer;
+}

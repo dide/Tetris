@@ -1,0 +1,23 @@
+.credits {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: black;
+	z-index: 12;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+}
+
+.credits>h1, .credits>p {
+	position: absolute;
+	top: 110%;
+	left: 50%;
+}
+
+.credits>h1 {
+	color: rgb(119, 117, 199);
+	line-height: 1em;
+	border-bottom: 0.1em solid white;
+}

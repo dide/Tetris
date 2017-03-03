@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr-FR">
+<meta charset="UTF-8">
+<title>Tetr 3D</title>
+
+<link rel="stylesheet" href="scripts/vue/VuePlateau3d.css"
+	type="text/css">
+
+<script data-main="scripts/tetr.3d" src="scripts/tools/require.js"></script>
+
+<script>
+	require.config({
+		shim: {
+			"threeLib" : {
+				exports : "THREE"
+			},
+
+			"orbitControls" : {
+				deps: [ "tools/three" ]
+				
+			},
+			"detector" : {
+				// deps: [ "threeCore" ],
+				
+				exports : "Detector"
+			}, "tools/three.require" : {
+				exports : "THREE"
+			}
+		},
+		
+		paths: {
+			"requireLib": "tools/require",
+			"threeLib": "tools/three",
+			"detector" : "tools/Detector",
+	        "orbitControls" : "tools/OrbitControls",
+	    }
+	});
+	require([ "three", "orbitControls" ]);
+</script>
+
+</head>
+<body></body>
+</html>

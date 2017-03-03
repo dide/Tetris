@@ -1,0 +1,121 @@
+.accueil {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	background: rgba(0, 67, 134, 0.9); 
+	z-index: 9;
+}
+
+.accueil>div.button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	cursor: pointer;
+	z-index: 11;
+}
+
+.accueil>div.button:hover {
+	color: #99CBAF;
+	transition: color 500ms ease;
+	-webkit-transition: color 500ms ease;
+}
+
+.accueil>span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 2em;
+}
+
+.accueil>a {
+	display: block;
+	font-size: 1em;
+	text-decoration: none;
+	color: white;
+}
+
+.accueil table {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -6.7em;
+	margin-top: -3em;
+	border-spacing: 0;
+	-moz-box-shadow: 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.4);
+	-webkit-box-shadow: 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.4);
+	box-shadow: 0.2em 0.2em 0.2em rgba(255, 255, 255, 0.4);
+	left: 50%;
+	border-radius: 0.4em;
+	border: 0.1em solid white;
+}
+
+.accueil table td {
+	font-size: 0.6em;
+	width: 7em;
+	overflow: hidden;
+}
+
+.accueil table td:nth-child(2n) {
+	text-align: left;
+}
+
+.accueil table th {
+	padding: 0 1em 0 1em;
+}
+
+.accueil table>tr:nth-child(2n) {
+	background-color: #2077C8;
+}
+
+.accueil table>tr:nth-child(2n+1) {
+	background-color: #34AE4D;
+}
+
+.accueil table>tr:FIRST-CHILD {
+	background-color: #8ba5bf;
+	width: 100%;
+}
+
+.accueil table>tr:LAST-CHILD {
+	background-color: #8ba5bf;
+	height: 0.6em;
+}
+
+.accueil table>tr:FIRST-CHILD>th:BEFORE {
+	content: "";
+	position: absolute;
+	height: 0.2em;
+	top: 0.1em;
+	left: 0.1em;
+	right: 0.1em;
+	border-top-left-radius: 0.4em;
+	border-top-right-radius: 0.4em;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.accueil table>tr:LAST-CHILD>td:AFTER {
+	content: "";
+	position: absolute;
+	height: 0.2em;
+	bottom: 0.1em;
+	left: 0.1em;
+	right: 0.1em;
+	border-bottom-left-radius: 0.4em;
+	border-bottom-right-radius: 0.4em;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.accueil table>tr:FIRST-CHILD>th {
+	border-top-left-radius: 0.4em;
+	border-top-right-radius: 0.4em;
+}
+
+.accueil table>tr:LAST-CHILD>td {
+	border-bottom-left-radius: 0.4em;
+	border-bottom-right-radius: 0.4em;
+}

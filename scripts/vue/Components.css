@@ -1,0 +1,114 @@
+@font-face {
+	font-family: 'Chewy';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Chewy'),
+		url(6XoXlBvfArPxzDH5BolASKCWcynf_cDxXwCLxiixG1c.woff) format('woff');
+}
+
+body {
+	/* background-color: #8ba5bf; */
+	background-color: #004386;
+	font-family: 'Chewy', cursive;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	color: rgb(220, 255, 228);
+	padding: 0;
+	margin: 0;
+	-webkit-transition: background-color 300ms linear, background-position
+		10s linear;
+	/* older webkit */
+	-webkit-transition: background-color 300ms linear, background-position
+		10s linear;
+	-moz-transition: background-color 300ms linear, background-position 10s
+		linear;
+	-o-transition: background-color 300ms linear, background-position 10s
+		linear;
+	transition: background-color 300ms linear, background-position 10s
+		linear;
+}
+
+body > div.loadingscreen {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #004386;
+	z-index: 16;
+	transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+}
+
+.button {
+	border: 0.1em solid white;
+	padding: 0 1em 0 1em;
+	border-radius: 0.4em;
+	-moz-box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+	box-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+.button:BEFORE {
+	content: "";
+	position: absolute;
+	height: 0.2em;
+	top: 0.1em;
+	left: 0.1em;
+	right: 0.1em;
+	border-top-left-radius: 0.4em;
+	border-top-right-radius: 0.4em;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:AFTER {
+	content: "";
+	position: absolute;
+	height: 0.2em;
+	bottom: 0.1em;
+	left: 0.1em;
+	right: 0.1em;
+	border-bottom-left-radius: 0.4em;
+	border-bottom-right-radius: 0.4em;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button:hover {
+	color: #99CBAF;
+	transition: color 500ms ease;
+	-webkit-transition: color 500ms ease;
+	background-color: #343434;
+}
+
+.button:active {
+	background-color: #646464;
+}
+
+.dialog {
+	border-radius: 0.4em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 1em;
+	background-color: #0070E0;
+	z-index: 10;
+}
+
+.dialog > form > input {
+	margin: 0.5em 0 0 0;
+	font-size: 1em;
+	font-family: 'Chewy', cursive;
+	background-color: #004386;
+	color: rgb(220, 255, 228);
+	border : none;
+	padding: 0 0.5em 0 0.5em;
+}
+
+.dialog > div.button {
+	display: inline-block;
+	margin: 0.5em 0.5em 0 0.5em;
+}
